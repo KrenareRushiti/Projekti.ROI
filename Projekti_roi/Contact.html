@@ -1,0 +1,173 @@
+<html>
+<head>
+    <title>dplus.org</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<style>
+
+.nav-link {
+  color: black;
+}
+
+#i1 {
+  color: rgb(14, 69, 132);
+}
+
+.navbar {
+    border-bottom: 1px solid rgb(241, 235, 235); 
+}
+
+h1 {
+          margin-top: 50px;
+          margin-left: 70px;
+          font-size: 70px;
+          border-bottom: 1px solid rgb(241, 235, 235); 
+        }
+        
+#i2, #i4, #i6, h2{
+    color: rgb(126, 203, 179);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#i3, #i5, #i7{
+    color: rgb(14, 69, 132);
+    font-size: 20px;
+    font-weight: bold;
+}
+label, input {
+    width: 60%;
+    padding: 5px;
+}
+
+ .btn {
+    border-style: groove;
+    padding: 5px;
+}
+</style>
+</head>
+
+    <body>
+    <nav class="navbar navbar-expand-sm text-muted">
+        <div class="container">
+            <a href="home.html">
+                <img src="Dplus llogo.png" alt="f1" width="140rem">
+            </a>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item" style="margin-left: 70px;">
+                <a class="nav-link" href="About us.html">Për D+</a>
+              </li>
+              <li class="nav-item" style="margin-left: 30px;">
+                <a class="nav-link" href="Publication.html">Publikimet</a>
+              </li> 
+              <li class="nav-item" style="margin-left: 30px;">
+                <a class="nav-link" href="">Programet</a>
+              </li>
+              <li class="nav-item" style="margin-left: 30px;">
+                <a class="nav-link" href="">Në Media</a>
+              </li>
+              <li class="nav-item" style="margin-left: 30px;">
+                <a class="nav-link" href="News.html">Lajmet</a>
+              </li> 
+              <li class="nav-item" style="margin-left: 30px;">
+                <a class="nav-link" href="">Kontakti</a>
+              </li>  
+              <li class="nav-item dropdown" style="margin-left: 50px;">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" id="i1">SHQ</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">ENG</a></li>
+                  <li><a class="dropdown-item" href="#">SRB</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <h1>Kontakti</h1>
+
+      &nbsp;
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p id="i2">Adresa</p>
+                <p id="i3">Rruga Bajram Kelmendi, nr. 92, Kati IV & V, Prishtinë 10000, Kosovë</p>
+                <a href="https://www.google.com/maps/place/Democracy+Plus/@42.6645378,21.1670694,19z/data=!4m6!3m5!1s0x13549ee110d5ee5f:0x55fe92b43c7e2925!8m2!3d42.664296!4d21.1674942!16s%2Fg%2F11df71flzc?entry=ttu">Google Maps &#8599;</a><br>
+
+                &nbsp;
+
+                <p id="i4">Email adresa</p>
+                <p id="i5">info@dplus.org</p><br>
+
+                <p id="i6">Telefoni</p>
+                <p id="i7">+383 (0)38 749 288</p><br>
+            </div>
+            <div class="col-md-6">
+                <h2>Abonohuni në buletinin informativ të D+</h2>
+                <form method="post">
+                    <label for="fname">Emri</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="sname">Mbiemri</label><br>
+                    <input type="text" id="sname" name="sname"><br>
+                    <label for="email">Email addresa</label><br>
+                    <input type="email" id="email" name="email"><br>
+                    <br>
+                    
+
+                    <button type="submit" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#confirmationModal">Dërgo</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">Konfirmimi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    A jeni i sigurtë që dëshironi të abonoheni në buletinin informativ të D+?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Anulo</button>
+                    <button type="button" class="btn btn-primary" id="confirmSubmit">Konfirmo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+       document.getElementById('confirmSubmit').addEventListener('click', function () {
+        // Delay form submission for 10 second
+        setTimeout(function () {
+            document.getElementById('subscriptionForm').submit();
+        }, 1000);
+    });
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
